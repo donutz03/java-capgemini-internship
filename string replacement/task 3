@@ -1,0 +1,42 @@
+package capgemini.lecture1;
+
+public class StringReplacement {
+
+    /**
+     * Transforms string by these rules:
+     * AB -> ""
+     * CD -> ""
+     * ABC -> C
+     * ABCD -> CD -> ""
+     * CABBAD -> CBAD -> CD -> ""
+     * BC -> BC
+     *
+     * @param text Contains only A, B, C or D characters
+     * @return
+     */
+    public static String replace(String textt) {
+        ArrayList<String> text = new ArrayList<String>();
+        for (int i = 0; i < textt.length; i++) {
+            textInArrayList.push(text[i]);
+        }
+        int index = 0;
+        int trueindex = 0;
+        while (true) {
+        if ((text[index] == 'A' && text[index + 1] == 'B') || (text[index] == 'B' && text[index] == 'A') || (text[index] == 'C' && text[index] == 'D') || (text[index ] == 'D' && text[index] == 'C')) {
+            text.remove(index);
+            text.remove(index + 1);
+            trueindex +=2;
+        } else {
+            index +=1;
+            trueindex +=1;
+        }
+        if (trueindex == textt.length) {
+            break;
+        }
+        }
+        
+        for(int i=0;i<text.size();i++){
+            System.out.println(text.get(i));
+        } 
+    }
+}
